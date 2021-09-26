@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const ProductImageContainer = styled.div`
-  width: 100%;
-  height: 560px;
+  width: 700px;
+  height: 500px;
+  margin-bottom: 60px;
   display: flex;
   position: relative;
   .productImage {
@@ -13,7 +14,7 @@ export const ProductImageContainer = styled.div`
     width: 100%;
     height: 100%;
     position: absolute;
-    left: 100px;
+    left: 30px;
     z-index: -1;
   }
 `;

@@ -1,6 +1,8 @@
 import CSS from 'csstype';
 import { ProductInfoContainer } from './ProductInfo.styles';
 import { IProductData } from '../../interfaces/IProductData';
+import ProductRating from '../ProductRating/ProductRating';
+import Tabs from '../Tabs/Tabs';
 
 interface IProductInfo {
   style: CSS.Properties;
@@ -10,7 +12,12 @@ interface IProductInfo {
 const ProductInfo = ({ style, productData }: IProductInfo) => {
   return (
     <ProductInfoContainer style={style}>
-      <h2>Info</h2>
+      <h2 className="productName">{productData?.name}</h2>
+      <ProductRating productData={productData} />
+      <span className="productSeller">
+        Vendido e entregue por <span className="store">{productData?.store}</span>
+      </span>
+      <Tabs productData={productData} />
     </ProductInfoContainer>
   );
 };
