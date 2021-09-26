@@ -6,8 +6,12 @@ import { ContainerWrapper, ProductGrid } from '../styles/Product/ProductPage.sty
 import ProductImage from '../components/ProductImage/ProductImage';
 import ProductInfo from '../components/ProductInfo/ProductInfo';
 import ProductControls from '../components/ProductControls/ProductControls';
+import ProductData from '../data/Product.data';
+import { IProductData } from '../interfaces/IProductData';
 
 const Product: NextPage = () => {
+  const product = ProductData.find((product: IProductData) => product._id === '00001');
+
   return (
     <ContainerWrapper>
       <Head>
@@ -15,9 +19,9 @@ const Product: NextPage = () => {
       </Head>
       <ProductGrid>
         <Header style={{ gridArea: 'headerArea' }} />
-        <ProductImage style={{ gridArea: 'imageArea' }} />
-        <ProductInfo style={{ gridArea: 'infoArea' }} />
-        <ProductControls style={{ gridArea: 'controlsArea' }} />
+        <ProductImage style={{ gridArea: 'imageArea' }} productData={product} />
+        <ProductInfo style={{ gridArea: 'infoArea' }} productData={product} />
+        <ProductControls style={{ gridArea: 'controlsArea' }} productData={product} />
       </ProductGrid>
     </ContainerWrapper>
   );

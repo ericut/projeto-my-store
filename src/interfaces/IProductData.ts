@@ -5,4 +5,5 @@ export interface IProductData {
   rates: number;
   store: string;
   details: string;
+  image: string;
 }

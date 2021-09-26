@@ -1,35 +1,16 @@
-import styled from 'styled-components';
+import CSS from 'csstype';
 import Image from 'next/image';
 //
 import DonaModaLogo from '../../../public/imgs/logo_donamoda.svg';
 import UserBar from '../../components/UserBar/UserBar';
 import ShoppingCart from '../../components/ShoppingCart/ShoppingCart';
+import { HeaderContainer, Logo, UserNavigation } from './Header.styles';
 
-const HeaderContainer = styled.div`
-  max-width: 100%;
-  width: 100%;
-  height: 56px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
+type IHeader = {
+  style: CSS.Properties;
+};
 
-const Logo = styled.div`
-  max-width: 100%;
-  width: 176px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const UserNavigation = styled.div`
-  max-width: 400px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-`;
-
-const Header = ({ style }: any) => {
+const Header = ({ style }: IHeader) => {
   return (
     <HeaderContainer style={style}>
       <Logo>

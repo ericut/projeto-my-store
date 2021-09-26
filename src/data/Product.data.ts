@@ -9,6 +9,7 @@ export const ProductData: IProductData[] = [
     store: 'Loja Renner',
     details:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim risus vel aliquet est at vitae in. Varius bibendum tristique sed mattis varius at neque, sed. Diam id et in volutpat cursus mattis nulla quis sollicitudin. Diam convallis sagittis amet, elementum.',
+    image: 'http://localhost:3000/products/product_image.png',
   },
 ];
 

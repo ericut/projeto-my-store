@@ -1,12 +1,13 @@
-import styled from 'styled-components';
+import CSS from 'csstype';
+import { ProductInfoContainer } from './ProductInfo.styles';
+import { IProductData } from '../../interfaces/IProductData';
 
-const ProductInfoContainer = styled.div`
-  max-width: 400px;
-  width: 400px;
-  display: flex;
-`;
+interface IProductInfo {
+  style: CSS.Properties;
+  productData: IProductData | undefined;
+}
 
-const ProductInfo = ({ style }: any) => {
+const ProductInfo = ({ style, productData }: IProductInfo) => {
   return (
     <ProductInfoContainer style={style}>
       <h2>Info</h2>

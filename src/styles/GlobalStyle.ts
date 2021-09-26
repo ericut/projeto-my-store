@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
       font-family: 'Open Sans', sans-serif;
       background: ${(props) => props.theme.background};
       color: ${(props) => props.theme.text};
+      transition: 0.3s all;
     }
     a {
       color: inherit;

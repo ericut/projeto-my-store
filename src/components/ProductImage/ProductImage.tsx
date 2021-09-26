@@ -1,30 +1,18 @@
-import styled from 'styled-components';
-import Image from 'next/image';
-import ProductImgPng from '../../../public/imgs/product_image.png';
+/* eslint-disable @next/next/no-img-element */
+import CSS from 'csstype';
+import { ProductImageContainer } from './ProductImage.styles';
+import { IProductData } from '../../interfaces/IProductData';
 
-const ProductImageContainer = styled.div`
-  width: 100%;
-  height: 560px;
-  display: flex;
-  position: relative;
-  .productImage {
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 100px;
-    z-index: -1;
-  }
-`;
+interface IProductImage {
+  style: CSS.Properties;
+  productData: IProductData | undefined;
+}
 
-const ProductImage = ({ style }: any) => {
+const ProductImage = ({ style, productData }: IProductImage) => {
   return (
     <ProductImageContainer style={style}>
       <div className="productImage">
-        <Image src={ProductImgPng} alt="BLUSA EM LINHO COM DETALHE" />
+        <img src={productData?.image} alt={productData?.name} title={productData?.name} />
       </div>
     </ProductImageContainer>
   );
