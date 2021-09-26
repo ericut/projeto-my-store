@@ -23,7 +23,15 @@ export const ProductGrid = styled.main`
 
   @media (max-width: 768px) {
     max-width: 768px;
-    padding: 2rem;
-    background: red;
+    padding: 1rem;
+    grid-template-areas:
+      'headerArea'
+      'imageArea'
+      'infoArea'
+      'controlsArea';
+  }
+
+  @media (max-width: 475px) {
+    max-width: 475px;
   }
 `;

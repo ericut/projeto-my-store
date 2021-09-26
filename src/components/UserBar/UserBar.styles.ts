@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const UserBarContainer = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: 768px) {
+    justify-content: flex-end;
+  }
 `;
 
 export const UserInitial = styled.div`
@@ -40,5 +43,12 @@ export const UserWelcome = styled.div`
     .arrowDown {
       transform: translateY(2px);
     }
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  @media (max-width: 475px) {
+    max-width: 475px;
   }
 `;

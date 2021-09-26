@@ -17,9 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
         <GlobalStyle />
         <Component {...pageProps} />
-        <button className="accent" onClick={() => setIsDarkTheme(!isDarkTheme)}>
-          Trocar Tema
-        </button>
+        <button onClick={() => setIsDarkTheme(!isDarkTheme)}>Trocar Tema</button>
       </ThemeProvider>
     </>
   );

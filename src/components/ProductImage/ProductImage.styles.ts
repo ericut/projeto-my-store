@@ -17,4 +17,10 @@ export const ProductImageContainer = styled.div`
     left: 30px;
     z-index: -1;
   }
+  @media (max-width: 768px) {
+    width: 100%;
+    .productImage {
+      left: 0;
+    }
+  }
 `;

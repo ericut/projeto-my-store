@@ -25,4 +25,9 @@ export const ProductInfoContainer = styled.div`
       font-weight: bold;
     }
   }
+  @media (max-width: 768px) {
+    justify-content: flex-end;
+    max-width: 100%;
+    width: 100%;
+  }
 `;
