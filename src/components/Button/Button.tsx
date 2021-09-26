@@ -1,11 +1,17 @@
 import styled from 'styled-components';
 
-const Button: any = styled.button`
+interface IButtonProps {
+  primaryColor?: any;
+  secondaryColor?: any;
+}
+
+const Button = styled.button<IButtonProps>`
   ${(props: any) =>
     props.primaryColor &&
     `
     color: ${props.theme.colors.buttontext};
     background-color: ${props.theme.colors.primary};
+    font-weight: bold;
   `}
   ${(props: any) =>
     props.secondaryColor &&

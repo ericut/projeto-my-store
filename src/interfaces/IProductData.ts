@@ -8,4 +8,12 @@ export interface IProductData {
   trim: string;
   care: string;
   image: string;
+  colors: IColors[];
+  sizes: string[];
+  payment: string[];
+}
+
+interface IColors {
+  name: string;
+  hex: string;
 }

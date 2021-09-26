@@ -2,11 +2,11 @@ import { useState, memo, useMemo } from 'react';
 import { TabsContainer, TabsHeader, Tab, TabContent } from './Tabs.styles';
 import { IProductData } from '../../interfaces/IProductData';
 
-interface IProductInfo {
+interface ITabs {
   productData: IProductData | undefined;
 }
 
-const Tabs = ({ productData }: IProductInfo) => {
+const Tabs = ({ productData }: ITabs) => {
   const tabs = ['Detalhes', 'Caimento', 'Cuidados'];
 
   const [activeTab, setActiveTab] = useState(tabs[0]);

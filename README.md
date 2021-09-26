@@ -16,7 +16,9 @@ Abra o [http://localhost:3000](http://localhost:3000) no seu navegador para visu
 ## Ficha Técnica
 
 • NextJS, como framework core
+
 • Styled Components, para criação de componentes baseada em estilos
+
 • React Hooks, como metodologia de desenvolvimento
 
 ### Projeto Online

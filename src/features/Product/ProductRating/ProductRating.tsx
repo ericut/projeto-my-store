@@ -3,11 +3,11 @@ import { ProductRatingContainer } from './ProductRating.styles';
 import { IProductData } from '../../../interfaces/IProductData';
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 
-interface IProductInfo {
+interface IProductRating {
   productData: IProductData | undefined;
 }
 
-const ProductRating = ({ productData }: IProductInfo) => {
+const ProductRating = ({ productData }: IProductRating) => {
   const [score, setScore] = useState<any>(productData?.score);
   const [hover, setHover] = useState(0);
 
