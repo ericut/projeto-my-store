@@ -1,6 +1,6 @@
 import { useState, memo } from 'react';
 import { ProductRatingContainer } from './ProductRating.styles';
-import { IProductData } from '../../interfaces/IProductData';
+import { IProductData } from '../../../interfaces/IProductData';
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 
 interface IProductInfo {

@@ -1,8 +1,18 @@
 import styled from 'styled-components';
 
-const Button = styled.button`
-  color: white;
-  background: #191919;
+const Button: any = styled.button`
+  ${(props: any) =>
+    props.primaryColor &&
+    `
+    color: ${props.theme.colors.buttontext};
+    background-color: ${props.theme.colors.primary};
+  `}
+  ${(props: any) =>
+    props.secondaryColor &&
+    `
+    color: ${props.theme.colors.buttontext};
+    background-color: ${props.theme.colors.secondary};
+  `}
   max-width: 100px;
   width: 100px;
   height: 40px;

@@ -1,5 +1,6 @@
 import UserData from '../../data/User.data';
-import { getUserInitial, getWelcomeMsg } from './UserBar.utils';
+import { getUserInitial } from '../../constants/getUserInitials';
+import { getWelcomeMsg } from '../../constants/getWelcomeMsg';
 import { AiOutlineUser } from 'react-icons/ai';
 import { RiArrowDownSLine } from 'react-icons/ri';
 import { UserBarContainer, UserInitial, UserWelcome } from './UserBar.styles';

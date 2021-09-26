@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import CSS from 'csstype';
 import { ProductImageContainer } from './ProductImage.styles';
-import { IProductData } from '../../interfaces/IProductData';
+import { IProductData } from '../../../interfaces/IProductData';
 
 interface IProductImage {
   style: CSS.Properties;

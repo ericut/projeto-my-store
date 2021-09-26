@@ -3,9 +3,9 @@ import Head from 'next/head';
 //
 import Header from '../components/Header/Header';
 import { ContainerWrapper, ProductGrid } from '../styles/Product/ProductPage.styles';
-import ProductImage from '../components/ProductImage/ProductImage';
-import ProductInfo from '../components/ProductInfo/ProductInfo';
-import ProductControls from '../components/ProductControls/ProductControls';
+import ProductImage from '../features/Product/ProductImage/ProductImage';
+import ProductInfo from '../features/Product/ProductInfo/ProductInfo';
+import ProductControls from '../features/Product/ProductControls/ProductControls';
 import ProductData from '../data/Product.data';
 import { IProductData } from '../interfaces/IProductData';
 

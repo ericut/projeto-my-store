@@ -1,6 +1,6 @@
 import CSS from 'csstype';
 import { ProductControlsContainer } from './ProductControls.styles';
-import { IProductData } from '../../interfaces/IProductData';
+import { IProductData } from '../../../interfaces/IProductData';
 
 interface IProductControls {
   style: CSS.Properties;

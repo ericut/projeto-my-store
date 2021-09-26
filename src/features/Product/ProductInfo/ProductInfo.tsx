@@ -1,8 +1,8 @@
 import CSS from 'csstype';
 import { ProductInfoContainer } from './ProductInfo.styles';
-import { IProductData } from '../../interfaces/IProductData';
+import { IProductData } from '../../../interfaces/IProductData';
 import ProductRating from '../ProductRating/ProductRating';
-import Tabs from '../Tabs/Tabs';
+import Tabs from '../../../components/Tabs/Tabs';
 import Shipping from '../Shipping/Shipping';
 
 interface IProductInfo {
