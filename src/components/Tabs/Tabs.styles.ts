@@ -12,6 +12,7 @@ export const TabsHeader = styled.div`
 `;
 
 export const Tab: any = styled.button`
+  background: transparent;
   width: 90px;
   font-size: 12px;
   line-height: 16px;

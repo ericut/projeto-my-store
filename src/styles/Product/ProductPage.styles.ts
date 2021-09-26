@@ -12,7 +12,7 @@ export const ContainerWrapper = styled.div`
 export const ProductGrid = styled.main`
   max-width: 1368px;
   width: 100%;
-  padding: 4.5rem;
+  padding: 4.5rem 4.5rem 2rem;
   display: grid;
   grid-gap: 20px;
   grid-template-areas:

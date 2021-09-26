@@ -3,23 +3,20 @@ import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '../styles/GlobalStyle';
 import { lightTheme, darkTheme } from '../theme/Theme';
+import ColorModeSwitch from '../components/ColorModeSwitch/ColorModeSwitch';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  // fazer contextapi para gerenciar a troca do darkmode <3
-  // fazer contextapi para gerenciar a troca do darkmode <3
-  // fazer contextapi para gerenciar a troca do darkmode <3
-  // fazer contextapi para gerenciar a troca do darkmode <3
-  // fazer contextapi para gerenciar a troca do darkmode <3
+function Master({ Component, pageProps }: AppProps) {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
 
   return (
     <>
       <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+        <ColorModeSwitch isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
         <GlobalStyle />
         <Component {...pageProps} />
-        <button onClick={() => setIsDarkTheme(!isDarkTheme)}>Trocar Tema</button>
       </ThemeProvider>
     </>
   );
 }
-export default MyApp;
+
+export default Master;

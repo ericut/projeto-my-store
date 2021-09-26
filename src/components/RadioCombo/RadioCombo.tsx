@@ -7,7 +7,7 @@ interface IRadioCombo {
 }
 
 const RadioCombo = ({ title, radioData }: IRadioCombo) => {
-  const [selectedRadio, setSelectedRadio] = useState('');
+  const [selectedRadio, setSelectedRadio] = useState(radioData?.[0]);
 
   const radiosContent = () => {
     function handleSelectRadioValue(e: any) {
