@@ -1,20 +1,20 @@
 import { ThemeProvider } from 'styled-components';
 import { lightTheme } from '../theme/Theme';
-import Button from '../components/Button/Button';
+import IconButton from '../components/IconButton/IconButton';
 import { GlobalStyle } from '../styles/GlobalStyle';
+import { AiOutlinePlus } from 'react-icons/ai';
 
 interface ButtonProps {
-  label: string;
   onClick?: () => void;
   backgroundColor: string;
 }
 
-export const ButtonEx = ({ label, backgroundColor }: ButtonProps) => {
+export const IconButtonEx = ({ backgroundColor }: ButtonProps) => {
   return (
     <ThemeProvider theme={lightTheme}>
-      <Button onClick={() => {}} backgroundColor={backgroundColor}>
-        {label}
-      </Button>
+      <IconButton onClick={() => {}} backgroundColor={backgroundColor}>
+        <AiOutlinePlus />
+      </IconButton>
       <GlobalStyle />
     </ThemeProvider>
   );

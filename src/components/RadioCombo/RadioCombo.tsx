@@ -1,13 +1,14 @@
 import { memo, useState, useEffect } from 'react';
-import { RadioComboContainer } from './RadioCombo.styles';
+import RadioComboContainer from './RadioCombo.styles';
 
 interface IRadioCombo {
   radioData?: string[];
   title: string;
   handleChanger: (value: string) => void;
+  color?: string;
 }
 
-const RadioCombo = ({ title, radioData, handleChanger }: IRadioCombo) => {
+const RadioCombo = ({ title, radioData, handleChanger, ...rest }: IRadioCombo) => {
   const [selectedRadio, setSelectedRadio] = useState(radioData?.[0]);
 
   useEffect(() => {
@@ -32,7 +33,7 @@ const RadioCombo = ({ title, radioData, handleChanger }: IRadioCombo) => {
   };
 
   return (
-    <RadioComboContainer>
+    <RadioComboContainer {...rest}>
       <span className="productControlTitles">{title}</span>
       <div className="radioGroup">{radiosContent()}</div>
     </RadioComboContainer>

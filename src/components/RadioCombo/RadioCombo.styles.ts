@@ -1,6 +1,11 @@
 import styled from 'styled-components';
+import { color, BackgroundProps, ColorProps } from 'styled-system';
 
-export const RadioComboContainer = styled.div`
+interface IRadioComboProps extends BackgroundProps, ColorProps {
+  backgroundColor?: any;
+}
+
+const RadioComboContainer = styled.div<IRadioComboProps>`
   display: flex;
   flex-direction: column;
   * {
@@ -9,6 +14,12 @@ export const RadioComboContainer = styled.div`
     *:after {
       box-sizing: border-box;
     }
+  }
+  .productControlTitles {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: ${(props) => props.theme.text};
   }
   .radioGroup {
     display: flex;
@@ -26,8 +37,9 @@ export const RadioComboContainer = styled.div`
       border-radius: 24px;
       color: ${(props) => props.theme.textdark};
       &.selected {
-        border: 1px solid #663399;
-        color: #663399 !important;
+        border: 1px solid;
+        border-color: ${color};
+        ${color};
         font-weight: bold;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
       }
@@ -53,3 +65,9 @@ export const RadioComboContainer = styled.div`
     }
   }
 `;
+
+RadioComboContainer.defaultProps = {
+  color: 'primary',
+};
+
+export default RadioComboContainer;

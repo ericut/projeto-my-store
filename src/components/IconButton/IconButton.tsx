@@ -1,6 +1,11 @@
 import styled from 'styled-components';
+import { color, BackgroundProps, ColorProps } from 'styled-system';
 
-const IconButton = styled.button`
+interface IButtonProps extends BackgroundProps, ColorProps {
+  backgroundColor?: any;
+}
+
+const IconButton = styled.button<IButtonProps>`
   background: #e0e0e0;
   width: 32px;
   height: 32px;
@@ -15,8 +20,12 @@ const IconButton = styled.button`
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   &:hover {
     color: #ffffff;
-    background: #663399;
+    ${color};
   }
 `;
+
+IconButton.defaultProps = {
+  backgroundColor: 'primary',
+};
 
 export default IconButton;

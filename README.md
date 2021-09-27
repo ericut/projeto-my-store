@@ -1,6 +1,6 @@
 # My Store Prototype
 
-Para iniciar o projeto no seu computador basta, clonar este repositório e rodar o seguinte comando:
+Para iniciar o projeto no seu computador basta clonar este repositório e rodar a aplicação, siga estes passos:
 
 • Clonar repositório
 `git clone https://github.com/ericut/projeto-my-store.git`
@@ -21,6 +21,13 @@ Abra o [http://localhost:3000](http://localhost:3000) no seu navegador para visu
 
 • React Hooks, como metodologia de desenvolvimento
 
+• Storybook, exemplificação de alguns componentes presentes no projeto
+
 ## Projeto Online
 
 [Link do projeto](https://myfashionstore.vercel.app/)
+
+## Storybook
+
+• Rodar o Storybook
+`yarn storybook` ou `npm run storybook`
