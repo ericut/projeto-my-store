@@ -1,24 +1,14 @@
 import styled from 'styled-components';
+import { color, BackgroundProps, ColorProps } from 'styled-system';
 
-interface IButtonProps {
-  primaryColor?: any;
-  secondaryColor?: any;
+interface IButtonProps extends BackgroundProps, ColorProps {
+  backgroundColor?: any;
 }
 
 const Button = styled.button<IButtonProps>`
-  ${(props: any) =>
-    props.primaryColor &&
-    `
-    color: ${props.theme.colors.buttontext};
-    background-color: ${props.theme.colors.primary};
-    font-weight: bold;
-  `}
-  ${(props: any) =>
-    props.secondaryColor &&
-    `
-    color: ${props.theme.colors.buttontext};
-    background-color: ${props.theme.colors.secondary};
-  `}
+  ${color};
+  color: ${(props) => props.theme.colors.buttontext};
+  font-weight: bold;
   min-width: 100px;
   height: 48px;
   padding: 12px 32px;

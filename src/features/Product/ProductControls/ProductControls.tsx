@@ -40,7 +40,7 @@ const ProductControls = ({ style, productData, productSelected, handleChanger, h
       <RadioCombo radioData={productData?.payment} title={'Pagamento'} handleChanger={setProductPayment} />
       <QuantitySelect handleChanger={setProductQuantity} maxQuantity={10} />
       <span className="productControlButtonContainer">
-        <Button primaryColor onClick={() => handleSubmit()}>
+        <Button backgroundColor="primary" onClick={() => handleSubmit()}>
           Comprar
         </Button>
       </span>

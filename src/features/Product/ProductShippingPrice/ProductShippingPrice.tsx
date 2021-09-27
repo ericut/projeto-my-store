@@ -24,7 +24,7 @@ const ProductShippingPrice = () => {
           value={shippingNumber}
           onChange={(e) => setShippingNumber(shippingMask(e.target.value))}
         />
-        <Button secondaryColor onClick={() => handleShippingCalcuator()}>
+        <Button backgroundColor="secondary" onClick={() => handleShippingCalcuator()}>
           Ok
         </Button>
       </div>

@@ -21,6 +21,6 @@ Abra o [http://localhost:3000](http://localhost:3000) no seu navegador para visu
 
 • React Hooks, como metodologia de desenvolvimento
 
-### Projeto Online
+## Projeto Online
 
 [Link do projeto](https://myfashionstore.vercel.app/)
