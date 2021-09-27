@@ -5,9 +5,9 @@ const Input = styled.input`
   height: 40px;
   border: 0;
   border-bottom: 1px solid;
-  border-bottom-color: #191919;
+  border-bottom-color: ${(props) => props.theme.inputborder};
   background: transparent;
-  color: #191919;
+  color: ${(props) => props.theme.text};
   &::placeholder {
     color: #5c5c5c;
   }
@@ -15,7 +15,7 @@ const Input = styled.input`
   &:active {
     outline: none;
     border-bottom: 2px solid;
-    border-bottom-color: #000000;
+    border-bottom-color: ${(props) => props.theme.borders};
   }
 `;
 

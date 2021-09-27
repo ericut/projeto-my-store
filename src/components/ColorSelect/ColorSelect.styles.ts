@@ -33,6 +33,7 @@ export const ColorSelectContainer = styled.div`
         font-size: 12px;
         line-height: 16px;
         text-transform: uppercase;
+        color: ${(props) => props.theme.textdark};
       }
       .colorRadioHex {
         cursor: pointer;

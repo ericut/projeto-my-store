@@ -6,7 +6,8 @@ export const TabsContainer = styled.div`
 `;
 
 export const TabsHeader = styled.div`
-  border-bottom: 1px solid #c4c4c4;
+  border-bottom: 1px solid;
+  border-bottom-color: ${(props) => props.theme.borders};
   display: flex;
   gap: 32px;
 `;
@@ -25,6 +26,7 @@ export const Tab: any = styled.button`
   outline: 0;
   transition: 0.4s all;
   opacity: 0.8;
+  color: ${(props) => props.theme.text};
   ${({ active }: any) => active && `border-bottom: 3px solid #191919; opacity: 1; font-weight: bold;`}
 `;
 
@@ -34,5 +36,6 @@ export const TabContent = styled.div`
   line-height: 160%;
   letter-spacing: 0.02em;
   padding: 24px 0;
-  border-bottom: 1px solid #c4c4c4;
+  border-bottom: 1px solid;
+  border-bottom-color: ${(props) => props.theme.borders};
 `;

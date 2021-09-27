@@ -8,7 +8,7 @@ export const ProductControlsContainer = styled.div`
   gap: 48px;
   align-items: center;
   padding: 24px 48px;
-  background: #f7f7f7;
+  background: ${(props) => props.theme.background.secondary};
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.16);
   border-radius: 80px;
   .productControlButtonContainer {
@@ -18,9 +18,14 @@ export const ProductControlsContainer = styled.div`
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 0.04em;
+    color: ${(props) => props.theme.text};
   }
 
   @media (max-width: 768px) {
     flex-direction: column;
+    align-items: flex-start;
+    border-radius: 10px;
+    padding: 24px;
+    gap: 18px;
   }
 `;

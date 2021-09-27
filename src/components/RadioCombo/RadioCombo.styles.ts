@@ -24,9 +24,10 @@ export const RadioComboContainer = styled.div`
       position: relative;
       background-color: #ffffff;
       border-radius: 24px;
+      color: ${(props) => props.theme.textdark};
       &.selected {
         border: 1px solid #663399;
-        color: #663399;
+        color: #663399 !important;
         font-weight: bold;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
       }

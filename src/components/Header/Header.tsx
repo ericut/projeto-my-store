@@ -1,20 +1,24 @@
+import { useContext } from 'react';
 import CSS from 'csstype';
-import Image from 'next/image';
-//
-import DonaModaLogo from '../../../public/imgs/logo_donamoda.svg';
 import UserBar from '../../components/UserBar/UserBar';
 import ShoppingCart from '../../components/ShoppingCart/ShoppingCart';
-import { HeaderContainer, Logo, UserNavigation } from './Header.styles';
+import { HeaderContainer, Logo, LogoImg, UserNavigation } from './Header.styles';
+import { ColorModeContext } from '../../context/ColorMode.context';
 
-type IHeader = {
+interface IHeader {
   style: CSS.Properties;
-};
+}
 
 const Header = ({ style }: IHeader) => {
+  const { isDarkTheme } = useContext(ColorModeContext);
   return (
     <HeaderContainer style={style}>
       <Logo>
-        <Image src={DonaModaLogo} alt="Dona Moda" />
+        {isDarkTheme ? (
+          <LogoImg src="/imgs/logo_donamoda_white.svg" alt="Dona Moda" />
+        ) : (
+          <LogoImg src="/imgs/logo_donamoda.svg" alt="Dona Moda" />
+        )}
       </Logo>
       <UserNavigation>
         <UserBar />

@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     body {
       font-family: 'Open Sans', sans-serif;
-      background: ${(props) => props.theme.background};
+      background: ${(props) => props.theme.background.primary};
       color: ${(props) => props.theme.text};
       transition: 0.3s all;
     }

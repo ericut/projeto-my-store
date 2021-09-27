@@ -18,6 +18,18 @@ export const Logo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    width: 276px;
+  }
+`;
+
+export const LogoImg = styled.img`
+  display: block;
+  position: relative;
+  @media (max-width: 768px) {
+    width: 276px;
+  }
 `;
 
 export const UserNavigation = styled.div`

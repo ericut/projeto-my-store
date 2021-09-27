@@ -19,6 +19,8 @@ export const ProductImageContainer = styled.div`
   }
   @media (max-width: 768px) {
     width: 100%;
+    height: 368px;
+    margin-bottom: 10px;
     .productImage {
       left: 0;
     }

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ProductInfoContainer = styled.div`
   max-width: 400px;
   width: 400px;
-  margin: 60px 0;
+  margin: 20px 0;
   display: flex;
   flex-direction: column;
   .productName {
@@ -13,7 +13,8 @@ export const ProductInfoContainer = styled.div`
     letter-spacing: 0.08em;
     text-transform: uppercase;
     padding: 0 0 16px 0;
-    border-bottom: 1px solid #c4c4c4;
+    border-bottom: 1px solid;
+    border-bottom-color: ${(props) => props.theme.borders};
     margin-bottom: 16px;
   }
   .productSeller {
@@ -29,5 +30,6 @@ export const ProductInfoContainer = styled.div`
     justify-content: flex-end;
     max-width: 100%;
     width: 100%;
+    margin: 20px 0;
   }
 `;
