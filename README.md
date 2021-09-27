@@ -1,5 +1,8 @@
 # My Store Prototype
 
+| ![Light Theme](https://github.com/ericut/projeto-my-store/blob/main/.doc/imgs/01-lighttheme.png) | ![Dark Theme](https://github.com/ericut/projeto-my-store/blob/main/.doc/imgs/02-darktheme.png) |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+
 Para iniciar o projeto no seu computador basta clonar este repositório e rodar a aplicação, siga estes passos:
 
 • Clonar repositório
