@@ -1,3 +1,4 @@
+import { useCallback, useState } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 //
@@ -8,9 +9,25 @@ import ProductInfo from '../features/Product/ProductInfo/ProductInfo';
 import ProductControls from '../features/Product/ProductControls/ProductControls';
 import ProductData from '../data/Product.data';
 import { IProductData } from '../interfaces/IProductData';
+import { IShoppingCart } from '../interfaces/IShoppingCart';
 
 const Product: NextPage = () => {
   const product = ProductData.find((product: IProductData) => product._id === '00001');
+
+  const [productSelected, setProductSelected] = useState<IShoppingCart>({
+    _id: product ? product?._id : '',
+    name: product ? product?.name : '',
+    color: '',
+    size: '',
+    payment: '',
+    quantity: 0,
+  });
+
+  const handleSubmit = useCallback(() => {
+    alert(
+      `Produto selecionado: ${productSelected.name}, cor: ${productSelected.color}, tamanho: ${productSelected.size}, quantidade: ${productSelected.quantity}. Será pago em ${productSelected.payment}.`
+    );
+  }, [productSelected]);
 
   return (
     <ContainerWrapper>
@@ -21,7 +38,13 @@ const Product: NextPage = () => {
         <Header style={{ gridArea: 'headerArea' }} />
         <ProductImage style={{ gridArea: 'imageArea' }} productData={product} />
         <ProductInfo style={{ gridArea: 'infoArea' }} productData={product} />
-        <ProductControls style={{ gridArea: 'controlsArea' }} productData={product} />
+        <ProductControls
+          style={{ gridArea: 'controlsArea' }}
+          productData={product}
+          productSelected={productSelected}
+          handleChanger={setProductSelected}
+          handleSubmit={handleSubmit}
+        />
       </ProductGrid>
     </ContainerWrapper>
   );

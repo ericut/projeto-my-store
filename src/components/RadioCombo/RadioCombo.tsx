@@ -1,18 +1,20 @@
-import { memo, useState } from 'react';
+import { memo, useState, useEffect } from 'react';
 import { RadioComboContainer } from './RadioCombo.styles';
 
 interface IRadioCombo {
   radioData?: string[];
   title: string;
+  handleChanger: (value: string) => void;
 }
 
-const RadioCombo = ({ title, radioData }: IRadioCombo) => {
+const RadioCombo = ({ title, radioData, handleChanger }: IRadioCombo) => {
   const [selectedRadio, setSelectedRadio] = useState(radioData?.[0]);
 
+  useEffect(() => {
+    handleChanger(selectedRadio ? selectedRadio : '');
+  }, [handleChanger, selectedRadio]);
+
   const radiosContent = () => {
-    function handleSelectRadioValue(e: any) {
-      setSelectedRadio(e.currentTarget.value);
-    }
     return radioData?.map((item, index) => {
       return (
         <label key={index} className={'radioCombo ' + (selectedRadio === item ? 'selected' : '')}>
@@ -21,7 +23,7 @@ const RadioCombo = ({ title, radioData }: IRadioCombo) => {
             className="radioComboInput"
             name={`radioCombo${title}`}
             value={item}
-            onChange={(e) => handleSelectRadioValue(e)}
+            onChange={(e) => setSelectedRadio(e.currentTarget.value)}
           ></input>
           <span className="radioComboLabel">{item}</span>
         </label>

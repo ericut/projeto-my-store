@@ -1,20 +1,21 @@
-import { memo, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 import { ColorSelectContainer } from './ColorSelect.styles';
 import { IProductData } from '../../interfaces/IProductData';
 
 interface IColorSelect {
   productData: IProductData | undefined;
+  handleChanger: (value: string) => void;
 }
 
-const ColorSelect = ({ productData }: IColorSelect) => {
+const ColorSelect = ({ productData, handleChanger }: IColorSelect) => {
   const productColors = productData?.colors;
   const [selectedColor, setSelectedColor] = useState(productData?.colors[0].name);
 
-  const colorsContent = () => {
-    function handleSelectColor(e: any) {
-      setSelectedColor(e.currentTarget.value);
-    }
+  useEffect(() => {
+    handleChanger(selectedColor ? selectedColor : '');
+  }, [handleChanger, selectedColor]);
 
+  const colorsContent = () => {
     return productColors?.map(({ name, hex }, index) => {
       return (
         <label key={index} className={'colorRadio ' + (selectedColor === name ? 'selected' : '')}>
@@ -24,7 +25,7 @@ const ColorSelect = ({ productData }: IColorSelect) => {
             className="colorRadioInput"
             name="colorSelect"
             value={name}
-            onChange={(e) => handleSelectColor(e)}
+            onChange={(e) => setSelectedColor(e.currentTarget.value)}
           ></input>
           {selectedColor === name ? <span className="colorRadioLabel">{name}</span> : ''}
         </label>

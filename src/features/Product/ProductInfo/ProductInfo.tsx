@@ -3,7 +3,7 @@ import { ProductInfoContainer } from './ProductInfo.styles';
 import { IProductData } from '../../../interfaces/IProductData';
 import ProductRating from '../ProductRating/ProductRating';
 import Tabs from '../../../components/Tabs/Tabs';
-import Shipping from '../Shipping/Shipping';
+import ProductShippingPrice from '../ProductShippingPrice/ProductShippingPrice';
 
 interface IProductInfo {
   style: CSS.Properties;
@@ -19,7 +19,7 @@ const ProductInfo = ({ style, productData }: IProductInfo) => {
         Vendido e entregue por <span className="store">{productData?.store}</span>
       </span>
       <Tabs productData={productData} />
-      <Shipping />
+      <ProductShippingPrice />
     </ProductInfoContainer>
   );
 };

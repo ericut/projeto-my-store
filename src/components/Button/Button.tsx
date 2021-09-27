@@ -19,17 +19,18 @@ const Button = styled.button<IButtonProps>`
     color: ${props.theme.colors.buttontext};
     background-color: ${props.theme.colors.secondary};
   `}
-  max-width: 100px;
-  width: 100px;
-  height: 40px;
-  padding: 12px 24px;
+  min-width: 100px;
+  height: 48px;
+  padding: 12px 32px;
   border-radius: 40px;
   border: none;
   cursor: pointer;
   font-size: 14px;
+  line-height: 19px;
   display: flex;
   justify-content: center;
-  letter-spacing: 2px;
+  align-items: center;
+  letter-spacing: 1px;
   text-transform: uppercase;
   transition: 0.4s all;
   &:hover {

@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { ShippingContainer } from './Shipping.styles';
+import { ShippingContainer } from './ProductShippingPrice.style';
 import Input from '../../../components/Input/Input';
 import Button from '../../../components/Button/Button';
 
-const Shipping = () => {
+const ProductShippingPrice = () => {
   const [shippingNumber, setShippingNumber] = useState('');
 
   const shippingMask = (value: string) => {
@@ -33,4 +33,4 @@ const Shipping = () => {
   );
 };
 
-export default Shipping;
+export default ProductShippingPrice;
